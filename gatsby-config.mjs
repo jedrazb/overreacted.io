@@ -92,6 +92,7 @@ const config = {
         trackingIds: [`G-X3VBX01YFV`],
       },
     },
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-feed`,
       options: {
