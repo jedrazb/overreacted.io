@@ -53,13 +53,25 @@ module.exports = [
   {
     header: 'Cycling Doppio',
     sourceType: 'sitemap',
-    sitemapUrl: 'https://www.cyclingdoppio.cc/sitemap.xml',
+    sitemapUrl: 'https://www.cyclingdoppio.com/sitemap.xml',
     urlFilter: '/en/blog/',
+    excludeFilters: [
+      '/blog/authors',
+      '/blog/autorzy',
+      '/blog/tags',
+      '/blog/tagi',
+    ],
   },
   {
     header: 'Cycling Doppio (Polish)',
     sourceType: 'sitemap',
-    sitemapUrl: 'https://www.cyclingdoppio.cc/sitemap.xml',
+    sitemapUrl: 'https://www.cyclingdoppio.com/sitemap.xml',
     urlFilter: '/blog/',
+    excludeFilters: [
+      '/blog/authors',
+      '/blog/autorzy',
+      '/blog/tags',
+      '/blog/tagi',
+    ],
   },
 ];

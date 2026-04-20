@@ -20,4 +20,4 @@ Tech blog by Jedr Blaszyk. Software engineering, search, and AI.
 * [Geometric Deep Learning - an overview](https://j.blaszyk.me/tech-blog/geometric-deep-learning-overview/)
 
 ### Other
-For bikepacking and travel stories, visit [cyclingdoppio.cc](https://www.cyclingdoppio.cc/en)
+For bikepacking and travel stories, visit [cyclingdoppio.com](https://www.cyclingdoppio.com/en)

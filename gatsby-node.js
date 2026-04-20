@@ -180,7 +180,7 @@ const fetchPageMetadata = async (url) => {
 };
 
 // Helper to parse XML sitemap using regex
-const parseSitemap = async (url, filter) => {
+const parseSitemap = async (url, filter, excludeFilters = []) => {
   try {
     const response = await fetch(url);
     if (!response.ok)
@@ -204,6 +204,11 @@ const parseSitemap = async (url, filter) => {
 
         // Apply filter if provided
         if (filter && !postUrl.includes(filter)) {
+          continue;
+        }
+
+        // Apply exclusion filters if provided
+        if (excludeFilters.some((excl) => postUrl.includes(excl))) {
           continue;
         }
 
@@ -262,7 +267,8 @@ exports.sourceNodes = async ({
       console.log(`Fetching sitemap for ${section.header}...`);
       const sitemapPosts = await parseSitemap(
         section.sitemapUrl,
-        section.urlFilter
+        section.urlFilter,
+        section.excludeFilters
       );
       posts = [...(section.posts || []), ...sitemapPosts];
     }
